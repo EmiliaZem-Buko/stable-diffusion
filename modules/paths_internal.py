@@ -6,6 +6,7 @@ import sys
 import shlex
 
 commandline_args = os.environ.get('COMMANDLINE_ARGS', "")
+commandline_args = os.environ.get ('COMMANDLINE_ARGS', "--skip-torch-cuda-test --no-half")
 sys.argv += shlex.split(commandline_args)
 
 cwd = os.getcwd()
